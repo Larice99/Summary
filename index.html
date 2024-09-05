@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><Summary></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="conteudo">
+            <div class="bluebox">
+                <h2 class="resultado">Your Result</h2>
+                <h1 class="numfirst"> 76 <p class="numsecond">of 100</p></h1>
+                <h1 class="great">Great <p class="mens">You scored higher than 65% of the people who have taken these tests.</p> </h1>
+            </div>
+            <div class="whitebox"id='whitebox'>
+                <p class="Summary">Summary</p>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            const whitebox = document.querySelector('.whitebox');
+                            data.forEach(item => {
+                                const itemDiv = document.createElement('div');
+                                itemDiv.classList.add('item');
+                                itemDiv.classList.add(item.category.toLowerCase());
+                                itemDiv.innerHTML = `
+                                    <div class="icon-wrap">
+                                        <img src="${item.icon}" alt="${item.category}">
+                                        <span class="category">${item.category}</span>
+                                    </div>
+                                    <p>${item.score}/100</p>`;
+                                whitebox.appendChild(itemDiv);
+                            });
+                            const Button = document.createElement('button');
+                            Button.classList.add('button');
+                            Button.textContent = 'Continue';
+                            whitebox.appendChild(Button);
+                        })
+                        .catch(error => console.error('Error ao carregar JSON', error))
+                    });   
+                </script>
+            </div>
+        </div>
+</body>
+</html>

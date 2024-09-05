@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    margin:0;
+    font-family: "Hanken Grotesk", sans-serif;
+} 
+    
+.conteudo{
+    display: flex;
+    align-items: center;
+    
+}
+.conteudo .bluebox{
+    background:linear-gradient(to bottom, rgb(73, 84, 221), rgb(73, 84, 221), rgb(73, 84, 221), rgb(46, 50, 179));
+    width: 280px;
+    padding:20px 10px;
+    border-radius: 20px 20px 20px 20px;
+    position: relative;
+    z-index:1;
+}
+
+.resultado{
+    color:rgba(255, 255, 255, 0.733);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:0,2rem;
+    font-weight:500;
+}
+        
+.numfirst{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    border-radius: 50%;
+    color:white;
+    font-size:5rem;
+    background:linear-gradient(to bottom,rgb(46, 50, 179), rgb(73, 84, 221));
+    margin: 14%;
+}
+.numsecond{
+    color:rgba(255, 255, 255, 0.733);
+    font-size: 1rem;
+    display: block;
+    margin: 0;
+                
+}
+
+.great{
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;           
+}
+.mens{
+    color:rgba(255, 255, 255, 0.733);
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin:0;
+    font-size:1rem;
+    font-weight:400;
+    padding-top: 28px;
+    padding-right:28px;
+    padding-left: 28px;
+
+ }
+
+.Summary{
+    text-align: left;
+    font-weight:700;
+    font-size: 1.5rem;
+    color: rgba(24, 23, 23, 0.842);
+    margin:0;
+    padding-bottom: 35px;
+}
+
+.whitebox {
+    background-color: rgb(250, 250, 250);
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+    width: 280px;
+    height: 450px;
+    align-items: center;
+    text-align: center;
+    gap:20px;
+    border-radius: 20px;
+    padding: 40px; 
+    position:relative;
+    z-index: 0;
+    left: -25px;
+} 
+
+.whitebox .item {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding:0 10px;
+    margin-left: 10px;
+    margin-bottom: 10px; 
+    background-color: rgba(238, 55, 55, 0.856); 
+    color: black;
+    font-weight: 600;
+}
+.whitebox .icon-wrap{
+    display:flex;
+    align-items: center;
+}
+.whitebox .icon-wrap img{
+    margin-right: 8px;
+}
+
+.whitebox .item p{
+    color:black;
+}
+.whitebox .item.reaction {
+    background-color: rgba(255, 51, 51, 0.137);
+    color:rgb(255, 51, 51);
+    margin-bottom:15px;
+}
+
+.whitebox .item.memory {
+    background-color: rgba(238, 224, 95, 0.137);
+    color:rgb(255, 148, 26);
+    margin-bottom:15px;
+}
+
+.whitebox .item.verbal {
+    background-color: rgba(45, 221, 60, 0.137);
+    color:rgb(0, 189, 150);
+    margin-bottom:15px;
+}
+
+.whitebox .item.visual {
+    background-color: rgba(0, 26, 255, 0.137);
+    color: rgb(29, 42, 204);
+    margin-bottom:50px;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+.button {
+    background-color: rgb(73, 84, 221);
+    color: white;
+    border: none;
+    padding: 15px 100px;
+    border-radius: 30px;
+    font-size: 1rem;
+    display: block;
+    margin: 20px 10px;
+    
+}
+
+.button:hover {
+    background:linear-gradient(to bottom,rgb(46, 50, 179), rgb(73, 84, 221));
+    position:relative;
+}
+
+@media (max-width:375px){
+
+    body{
+        height: auto;
+        margin: 0;
+
+       }
+       .conteudo{
+        margin: 0;
+        width:auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .bluebox{
+        width: 100px;;
+        margin:10px 0;
+        border-radius: 50px 50px;
+        position: relative;
+        z-index:1;
+    }
+    .numfirst{
+        width:150px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items:center;
+        border-radius: 50%;
+        color:white;
+        font-size:3rem;
+        margin: 24%;
+    }
+    
+    .whitebox{
+        background-color: rgb(250, 250, 250);
+        width: auto;
+        align-items: center;
+        text-align: center;
+        gap:20px;
+        position:relative;
+        z-index: 0;
+    }
+
+}
