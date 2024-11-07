@@ -182,7 +182,7 @@ body{
         flex-direction: column;
     }
     .conteudo .bluebox{
-        width: 100%;
+        width:100%;
         margin:10px 0;
         border-radius: 50px 50px;
         position: relative;
@@ -209,7 +209,7 @@ body{
         gap:20px;
         position:relative;
         z-index: 0;
-        left:0;
+        left: 0;
     }
 
 }
